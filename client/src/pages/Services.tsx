@@ -1,7 +1,7 @@
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageCircle } from "lucide-react";
+
 
 const services = [
   {
@@ -72,10 +72,10 @@ export default function Services() {
               <p className="mb-4">{service.description}</p>
               <div className="flex gap-2">
                 <Button onClick={handleBooking}>
-                  Book a Consultation →
+                  Book a Consultation <i className="fas fa-arrow-right ml-2"></i>
                 </Button>
                 <Button variant="outline" onClick={() => handleWhatsApp(service.title)}>
-                  <WhatsappIcon className="mr-2 h-4 w-4" />
+                  <i className="fas fa-whatsapp mr-2"></i>
                   WhatsApp
                 </Button>
               </div>
