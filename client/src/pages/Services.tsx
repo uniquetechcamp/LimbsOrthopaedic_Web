@@ -1,4 +1,3 @@
-
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -68,24 +67,20 @@ export default function Services() {
   };
 
   return (
-    <div>
-      {/* Page Header */}
+    <main>
       <div className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold">
             <GradientText>Our Services</GradientText>
           </h1>
           <p className="text-xl text-gray-600 mt-2">Comprehensive Solutions for Every Need</p>
-          <div className="container mx-auto px-4">
-            <p className="text-gray-700 text-lg max-w-4xl mx-auto text-center mb-12">
+          <p className="text-gray-700 text-lg max-w-4xl mx-auto text-center mb-12">
               At LIMBS Orthopaedic, we offer a comprehensive range of prosthetic and orthotic solutions tailored to meet the unique needs of each patient. Our services are designed to enhance mobility, improve comfort, and restore independence.
             </p>
-          </div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-8">
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <Card key={service.id} className="overflow-hidden flex flex-col">
@@ -137,11 +132,11 @@ export default function Services() {
             <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Process</h2>
             <p className="text-xl text-gray-600 mt-2">How We Deliver Custom Solutions</p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#34bdf2] opacity-30"></div>
-              
+
               <div className="relative z-10 mb-12">
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right">
@@ -157,7 +152,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative z-10 mb-12">
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pl-8 order-1 md:order-2">
@@ -173,7 +168,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative z-10 mb-12">
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pr-8 md:text-right">
@@ -189,7 +184,7 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative z-10">
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/2 md:pl-8 order-1 md:order-2">
@@ -222,6 +217,6 @@ export default function Services() {
           </Button>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
