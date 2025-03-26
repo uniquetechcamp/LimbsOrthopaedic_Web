@@ -70,13 +70,16 @@ export default function Services() {
             </CardHeader>
             <CardContent>
               <p className="mb-4">{service.description}</p>
-              <div className="flex gap-2">
+              <div className="flex flex-col gap-2">
                 <Button onClick={handleBooking}>
                   Book a Consultation <i className="fas fa-arrow-right ml-2"></i>
                 </Button>
-                <Button variant="outline" onClick={() => handleWhatsApp(service.title)}>
-                  <i className="fas fa-whatsapp mr-2"></i>
-                  WhatsApp
+                <Button 
+                  className="bg-[#25D366] hover:bg-[#20bd5a] text-white" 
+                  onClick={() => handleWhatsApp(service.title)}
+                >
+                  <i className="fab fa-whatsapp mr-2"></i>
+                  Consult on WhatsApp
                 </Button>
               </div>
             </CardContent>
