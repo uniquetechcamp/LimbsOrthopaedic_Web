@@ -20,7 +20,8 @@ import CreateSuperusers from "@/pages/admin/CreateSuperusers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import LiveChat from "@/components/layout/LiveChat";
-import Products from "@/pages/Products"; //Import the Products component
+import Products from "@/pages/Products";
+import Blog from "@/pages/Blog";
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
-          <Route path="/products" component={Products} /> {/* Added Products route */}
+          <Route path="/products" component={Products} />
+          <Route path="/blog" component={Blog} />
           <Route path="/testimonials" component={Testimonials} />
           <Route path="/contact" component={Contact} />
           <Route path="/appointment" component={AppointmentBooking} />
