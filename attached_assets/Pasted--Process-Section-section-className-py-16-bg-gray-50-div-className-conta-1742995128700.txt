@@ -1,0 +1,101 @@
+{/* Process Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2">
+              <GradientText>Our Process</GradientText>
+            </h2>
+            <p className="text-xl text-gray-600 mt-2">How We Deliver Custom Solutions</p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Process Timeline */}
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#34bdf2] opacity-30"></div>
+              
+              {/* Step 1 */}
+              <div className="relative z-10 mb-12">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">1. Initial Consultation</h3>
+                      <p className="text-gray-600">
+                        Our specialists will meet with you to understand your specific needs, medical history, and goals for your prosthetic or orthotic device.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex md:w-1/2 md:pl-8 justify-start">
+                    <div className="w-12 h-12 rounded-full bg-[#34bdf2] flex items-center justify-center text-white text-xl font-bold">1</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Step 2 */}
+              <div className="relative z-10 mb-12">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pl-8 order-1 md:order-2">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">2. Assessment & Measurement</h3>
+                      <p className="text-gray-600">
+                        We take precise measurements and, if necessary, create molds or 3D scans to ensure your device fits perfectly and functions as needed.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex md:w-1/2 md:pr-8 justify-end order-2 md:order-1">
+                    <div className="w-12 h-12 rounded-full bg-[#34bdf2] flex items-center justify-center text-white text-xl font-bold">2</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Step 3 */}
+              <div className="relative z-10 mb-12">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pr-8 md:text-right">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">3. Custom Design & Fabrication</h3>
+                      <p className="text-gray-600">
+                        Our team designs and fabricates your custom device, paying careful attention to every detail to ensure comfort, functionality, and aesthetic appeal.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex md:w-1/2 md:pl-8 justify-start">
+                    <div className="w-12 h-12 rounded-full bg-[#34bdf2] flex items-center justify-center text-white text-xl font-bold">3</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Step 4 */}
+              <div className="relative z-10">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="md:w-1/2 md:pl-8 order-1 md:order-2">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">4. Fitting & Follow-up Care</h3>
+                      <p className="text-gray-600">
+                        We ensure your device fits properly and provide ongoing support, adjustments, and maintenance to help you achieve the best possible outcome.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:flex md:w-1/2 md:pr-8 justify-end order-2 md:order-1">
+                    <div className="w-12 h-12 rounded-full bg-[#34bdf2] flex items-center justify-center text-white text-xl font-bold">4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call-to-action */}
+      <section className="py-16 gradient-bg">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+            Book a consultation with our specialists to discuss your specific needs and explore the options available to you.
+          </p>
+          <Link href="/appointment">
+            <a className="px-8 py-4 bg-white text-[#34bdf2] font-bold rounded-md hover:bg-gray-100 transition inline-block">
+              Book an Appointment
+            </a>
+          </Link>
+        </div>
+      </section>
