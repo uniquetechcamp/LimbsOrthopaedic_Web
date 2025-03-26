@@ -68,14 +68,14 @@ export default function Services() {
 
   return (
     <main>
-      <section className="bg-gray-100 py-16">
+      <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">
+            <h1 className="text-4xl font-bold">
               <GradientText>Our Services</GradientText>
             </h1>
-            <p className="text-xl text-gray-600 mb-6">Comprehensive Solutions for Every Need</p>
-            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mt-2">Comprehensive Solutions for Every Need</p>
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto mt-4">
               At LIMBS Orthopaedic, we offer a comprehensive range of prosthetic and orthotic solutions tailored to meet the unique needs of each patient. Our services are designed to enhance mobility, improve comfort, and restore independence.
             </p>
           </div>
