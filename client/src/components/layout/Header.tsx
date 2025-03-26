@@ -24,7 +24,7 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Testimonials", href: "/testimonials" },
+    { name: "Products", href: "/products" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -62,7 +62,7 @@ const Header = () => {
                 </div>
               </Link>
             </div>
-            
+
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-6 items-center">
               {navLinks.map((link) => (
@@ -80,7 +80,7 @@ const Header = () => {
               >
                 Book Appointment
               </Link>
-              
+
               {user ? (
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -119,7 +119,7 @@ const Header = () => {
                 </Button>
               )}
             </div>
-            
+
             {/* Mobile Menu Button */}
             <button 
               className="md:hidden text-gray-500 focus:outline-none"
@@ -130,7 +130,7 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          
+
           {/* Mobile Menu */}
           <div className={`md:hidden pb-4 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
             <div className="flex flex-col space-y-3">
@@ -151,7 +151,7 @@ const Header = () => {
               >
                 Book Appointment
               </Link>
-              
+
               {user ? (
                 <>
                   {user.role === "patient" && (
