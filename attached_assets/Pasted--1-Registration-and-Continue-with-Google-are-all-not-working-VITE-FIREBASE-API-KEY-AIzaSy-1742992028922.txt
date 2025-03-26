@@ -1,0 +1,85 @@
+
+
+=1=
+“Registration” and “Continue with Google” are all not working {VITE_FIREBASE_API_KEY=AIzaSyBMjLUXangE1ND2NUDBW84SmcDLTiM361s
+VITE_FIREBASE_PROJECT_ID=limbsorthopaedic
+VITE_FIREBASE_APP_ID=1:704165842142:web:5a247387fae5a0824b864f
+}. I have also detected that FAKE owners/admins and doctors will register, so I want you to change the code for registration to be for patients only. Then create 2 owner/superuser with these details: 1. (Fullname: Lawrence Otieno; Email Address: cybertechocean@gmail.com; Password: L@HhZ5LGZYkr1d.KtzFxXUmP) AND 2. (Fullname: Collins Otieno; Email Address: collinsokoth71@gmail.com; Password: Col!Rtpz7L@HKt3Ts). These two individuals will be able register doctors on the website from their dashboard (This is to prevent fake owners/admins and fake doctors registration). Login is OK because either patient or doctor or owner/admin can login by choosing (we only need to check that it has no error).
+
+Redo registration page. It must be only for patients. Ensure that everything is working well. Upon successful registration/sign-up, the user must be redirected to their own dashboard. Also upon successful login, everyone must be redirected to their own dashboard.
+
+Welcome Email should be implemented. (It MUST have: logo, link to services, link to book appointment, link to products).
+
+Also other email notifications like password reset and login from a new device. 
+
+###############
+
+=2=
+On the Services Page “\client\src\pages\Services.tsx” replace those 6 service listed with the following:
+
+### 1. Treatment for Various Conditions
+
+1. Artificial Limbs (Lower & Upper Limbs)  
+   We provide custom prosthetic solutions for individuals with limb differences, focusing on functionality, comfort, and an improved quality of life. Our prostheses are designed using advanced materials to ensure durability and ease of use. 
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+2. Rickets  
+   Our specialists diagnose and manage rickets, a condition often caused by vitamin D deficiency. We offer corrective procedures, nutritional guidance, and orthotic solutions to support proper bone growth.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+3. Bow Legs  
+   Using corrective braces and specialized therapies, we help straighten the lower limbs in both children and adults. Early intervention can lead to significantly improved posture and mobility.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+4. Knock-Knees  
+   Through customized orthotic devices and rehabilitative exercises, we work to correct knee alignment, reducing discomfort and improving gait.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+5. Spinal Deformities (Scoliosis, Kyphosis, etc.)  
+   Our team offers bracing, physical therapy, and in certain cases, surgical consultations for spinal deformities. Each treatment plan is personalized to maintain and enhance spinal alignment.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+6. Foot Pains & Problems (Flat Feet, Calcaneal Spur, Plantar Fasciitis, etc.)  
+   We design orthotic insoles, custom footwear, and targeted therapy programs to alleviate foot pain, enhance stability, and correct biomechanical issues.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+7. Stroke Management  
+   Comprehensive rehabilitation programs for stroke survivors include physical therapy, assistive devices, and gait training, aimed at restoring mobility and independence.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+8. Birth Deformity  
+   Our pediatric specialists provide early interventions for congenital deformities, ensuring children receive the best possible care and corrective measures for long-term health.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+9. Lower Limb Paralysis  
+   From specialized braces to advanced prosthetic technology, we tailor solutions that support mobility and help patients regain as much function as possible.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+10. Delayed Milestone  
+   For children experiencing developmental delays, we offer physical therapy, orthotic support, and guidance for caregivers to foster optimal growth and progress.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+11. Club Foot  
+   Using techniques like the Ponseti method, we correct club foot through gentle manipulation, casting, and if necessary, minor procedures to ensure proper foot alignment.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+12. Cerebral Palsy  
+   We create custom orthoses, seating systems, and rehabilitation plans that address the unique mobility challenges faced by individuals with cerebral palsy.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+13. Arthritis  
+   Arthritic pain management includes orthotic devices, joint support, and targeted exercises designed to reduce inflammation and enhance joint function.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+14. Lower Back Pain  
+   Our approach to back pain involves posture correction, spinal support braces, and therapeutic exercises that alleviate discomfort and improve spinal health.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+15. Etc.  
+   We continually expand our services to include other musculoskeletal conditions, ensuring each patient receives personalized, state-of-the-art care.  
+Button 1 Link: “Book a Consultation {arrow icon >}” onClick opens “appointment” page/form ALSO/OR Button 2 Link: “Order on WhatsApp {WhatsApp Icon}” onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic *, I want [title of service] [service url]”
+
+---
+
+### 2. Home-Based Care Services
+Our team extends its expertise to the comfort of your home. We provide professional care services—such as physical therapy, orthotic fittings, and follow-up consultations—right at your doorstep, ensuring convenience and personalized attention. Link: “Call Us +254719628276”
