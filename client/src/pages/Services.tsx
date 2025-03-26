@@ -1,7 +1,7 @@
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { WhatsappIcon } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const services = [
   {
