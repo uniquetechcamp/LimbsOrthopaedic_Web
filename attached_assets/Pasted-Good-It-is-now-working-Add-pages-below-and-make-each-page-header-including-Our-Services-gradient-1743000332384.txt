@@ -1,0 +1,209 @@
+Good. It is now working. Add pages below and make each page header including "Our Services" gradient with my primary colors, the same way you did to other pages.
+
+ADD 2 PAGES
+## 1. Products Page
+
+### Purpose & Features
+- Objective:  
+  Showcase a range of 20 products—prosthetics, orthotics, and related accessories—using a modern, visually-rich design that appeals to tech-savvy and design-conscious users.
+  
+- Key Features:  
+  - Product Card Layout: Each product is displayed as a card with an image, name, short description, and interactive buttons.
+  - "Know More" Button: Opens a dedicated product detail page with extended information.
+  - "Place Order" Button: Initiates an order process directly within the website (could open a modal or direct to a checkout page).
+  - "Order on WhatsApp" Button: Opens WhatsApp (using the WhatsApp API) with a pre-filled message that includes a link or product ID, making it simple for users to reach out immediately.
+
+### Design & Layout
+- Visual Style:  
+  - Modern Grid Layout: Use a responsive grid that automatically adjusts based on screen size.
+  - Card Aesthetics: Clean, minimal cards with a focus on high-quality product images and bold typography.
+  - Hover Effects: Subtle animations on hover (e.g., slight scaling or shadow effects) to engage users.
+  
+- Interactivity:  
+  - Lazy Loading: Products load progressively for a smooth browsing experience.
+  - Quick-View Modal: Option to preview product details in a pop-up modal before clicking “Know More.”
+  - Social Sharing: Easy options to share products on social media.
+
+### Dummy Products Data (Example)
+Below is a list of 7 sample products with generated dummy data. (In your actual implementation, this data could be stored in a JSON file.)
+
+Products Data (Rehabilitation Products & Mobility Aids)
+1. Product Name: Wheelchairs (Motorized, Manual, Pediatric, and Sports Wheelchairs)
+ Image: [USE URL FROM https://unsplash.com/]
+ Short Description: "A wide range of wheelchairs suited for different age groups and mobility needs, from basic manual models to high-performance sports chairs."
+ Product Link: /products/wheelchairs -  It is a "Know More" Button (Clicking opens this product's detailed page with full specifications, images, and customer reviews.)
+ Product Price: KES 50,000 (should have a strikethrough if Sale Price is available)
+ Sale Price: KES 45,000
+A button - use this icon "fab fa-whatsapp" and this white text  "Order on WhatsApp" also that button's color should be the same as that of WhatsApp. onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic*, I want to buy [Product Name] [Product Link]”
+
+
+2. Product Name: Walking Frames
+ Image: [USE URL FROM https://unsplash.com/]
+ Short Description: "Lightweight and stable frames that offer support and balance, ideal for patients recovering from surgery or experiencing limited mobility."
+ Product Link: /products/walking-frames -  It is a "Know More" Button (Clicking opens this product's detailed page with full specifications, images, and customer reviews.)
+ Product Price: KES 15,000 (should have a strikethrough if Sale Price is available)
+ Sale Price: KES 12,000
+A button - use this icon "fab fa-whatsapp" and this white text  "Order on WhatsApp" also that button's color should be the same as that of WhatsApp. onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic*, I want to buy [Product Name] [Product Link]”
+
+
+3. Product Name: Crutches
+ Image: [USE URL FROM https://unsplash.com/]
+ Short Description: "Ergonomically designed crutches that help redistribute weight and support ambulation during recovery or long-term mobility challenges."
+ Product Link: /products/crutches -  It is a "Know More" Button (Clicking opens this product's detailed page with full specifications, images, and customer reviews.)
+A button - use this icon "fab fa-whatsapp" and this white text  "Order on WhatsApp" also that button's color should be the same as that of WhatsApp. onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic*, I want to buy [Product Name] [Product Link]”
+4. Product Name: Sticks/Canes
+ Image: [USE URL FROM https://unsplash.com/]
+ Short Description: "A variety of canes and walking sticks, each tailored to different grip styles and height requirements for optimal stability."
+ Product Link: /products/sticks-canes -  It is a "Know More" Button (Clicking opens this product's detailed page with full specifications, images, and customer reviews.)
+ Product Price: KES 3,000 (should have a strikethrough if Sale Price is available)
+ Sale Price: KES 2,500
+A button - use this icon "fab fa-whatsapp" and this white text  "Order on WhatsApp" also that button's color should be the same as that of WhatsApp. onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic*, I want to buy [Product Name] [Product Link]”
+5. Product Name: Special Seats for Cerebral Palsy (C.P.)
+ Image: [USE URL FROM https://unsplash.com/]
+ Short Description: "Custom seating systems that provide support, comfort, and correct posture for individuals with cerebral palsy or other conditions affecting trunk control."
+ Product Link: /products/special-seats-cp -  It is a "Know More" Button (Clicking opens this product's detailed page with full specifications, images, and customer reviews.)
+ Product Price: KES 25,000 (should have a strikethrough if Sale Price is available)
+ Sale Price: KES 22,000
+A button - use this icon "fab fa-whatsapp" and this white text  "Order on WhatsApp" also that button's color should be the same as that of WhatsApp. onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic*, I want to buy [Product Name] [Product Link]”
+6. Product Name: Diabetic Footwear
+ Image: [USE URL FROM https://unsplash.com/]
+ Short Description: "Specialized shoes designed to protect diabetic feet from ulcers, pressure points, and other complications, featuring breathable materials and supportive insoles."
+ Product Link: /products/diabetic-footwear -  It is a "Know More" Button (Clicking opens this product's detailed page with full specifications, images, and customer reviews.)
+ Product Price: KES 18,000 (should have a strikethrough if Sale Price is available)
+ Sale Price: KES 15,000
+7. Product Name: Standing Frames
+ Image: [USE URL FROM https://unsplash.com/]
+ Short Description: "Assistive devices that enable users to maintain a standing position for improved circulation, bone density, and overall well-being."
+ Product Link: /products/standing-frames -  It is a "Know More" Button (Clicking opens this product's detailed page with full specifications, images, and customer reviews.)
+ Product Price: KES 30,000 (should have a strikethrough if Sale Price is available)
+ Sale Price: KES 28,000
+A button - use this icon "fab fa-whatsapp" and this white text  "Order on WhatsApp" also that button's color should be the same as that of WhatsApp. onClick opens WhatsApp chat “https://wa.me/254719628276” with prefilled message “Hello *LIMBS Orthopaedic*, I want to buy [Product Name] [Product Link]”
+-----
+
+### Admin Products Editor ( Restricted - ONLY on owner/admin dashboard - Create, Edit/Update, Delete)
+- Access & Role-Based Permissions:  
+  Within the admin/dashboard area, only authenticated users with the role of owner/admin will have access to product management features. This is achieved using role-based access control (RBAC), ensuring that sensitive operations are restricted.
+
+- Admin Product Management Features:  
+  - Create Product:  
+    - A form to add new products. This form will include fields for product image upload, product name, a detailed description, pricing, and any additional metadata (e.g., category, tags).
+    - A “Submit” button to add the new product to the database, making it immediately visible on the public products page.
+  
+  - Edit/Update Product:  
+    - Each product listed in the dashboard will have an “Edit” button. Clicking it will open an interface where the owner/admin can update any product details, including images, descriptions, and pricing.
+    - Changes are saved with an “Update” button, and modifications are instantly reflected on the public site.
+  
+  - Delete Product:  
+    - An option to remove a product permanently from the listing. A confirmation prompt ensures that deletion is intentional.
+    - This helps maintain a clean and up-to-date product catalog.
+
+- User Interface for Product Management:  
+  - Dashboard Integration:  
+    - The product management functionality will be a dedicated section within the admin dashboard.
+    - The layout is similar to the public-facing product cards, but with additional controls (Edit, Delete, Create New Product).
+  - Rich Editing Tools:  
+    - Incorporate a rich text editor for detailed product descriptions.
+    - Drag-and-drop image upload for ease of use.
+  - Feedback and Confirmation:  
+    - After each operation (create, update, delete), display confirmation messages (toast notifications) to inform the admin of successful actions.
+
+### Admin Orders/Products Dashboard
+On owner/admin dashboard there should be
+    - Orders placed and stage/progress of completion (stage/progress is a dropdown list)
+    - Patient's requests with complete information and stage/progress
+
+---
+
+### Workflow and Implementation
+- Backend Integration:  
+  - Ensure that your API endpoints (e.g., via Vercel’s serverless functions) support CRUD operations for products.
+  - Use authentication tokens and role-checking in API requests to verify that only owner/admin users can perform create, update, or delete actions.
+
+- State Management:  
+  - Use Redux or Context API to manage product data on the front-end.
+  - Implement optimistic updates to show changes immediately in the UI upon admin actions.
+
+- Security Considerations:  
+  - Validate input data on both client and server sides.
+  - Protect routes in the admin dashboard with role-based route guards.
+
+---
+
+## 2. Blog Page
+
+### Purpose & Features
+- Objective:  
+  Provide engaging, modern content that resonates with Gen Z readers and builds thought leadership in the medical field. The blog serves both as a resource for patients and a communication channel for the hospital.
+  
+- Key Features:  
+  - Modern, Attractive Design: Use a clean, grid-based layout with featured images, short excerpts, and bold headings.
+  - Responsive Layout: Ensure the blog looks great on mobile devices, tablets, and desktops.
+  - Rich Media Integration: Videos, images, and interactive infographics can be added/embedded.
+  - Blog Editing Interface: On the admin side, provide a modern, rich text editor (e.g., using Draft.js or Quill) for owners or authorized staff to write and format blog posts.
+
+### Blog Data (Example)
+Here are 7 blog entries with content:
+
+1. Blog Title: "The Future of Prosthetics: Innovations Changing Lives"  
+   Excerpt: "Explore the cutting-edge technologies that are revolutionizing prosthetic limbs and transforming patient experiences."  
+   Published Date: 2025-01-10  
+   Link: /blog/future-of-prosthetics
+
+2. Blog Title: "How Custom Orthotics Can Relieve Chronic Pain"  
+   Excerpt: "Discover the benefits of personalized orthotic solutions and how they help alleviate persistent pain conditions."  
+   Published Date: 2025-01-17  
+   Link: /blog/custom-orthotics-chronic-pain
+
+3. Blog Title: "A Patient’s Journey: Overcoming Limb Differences"  
+   Excerpt: "Read an inspiring story of resilience and hope from one of our patients who transformed their life with custom prosthetics."  
+   Published Date: 2025-02-05  
+   Link: /blog/patient-journey
+
+4. Blog Title: "The Science Behind Diabetic Footwear"  
+   Excerpt: "Uncover how specialized footwear is designed to protect diabetic feet and prevent complications."  
+   Published Date: 2025-02-14  
+   Link: /blog/diabetic-footwear-science
+
+5. Blog Title: "Top 5 Tips for a Successful Rehabilitation"  
+   Excerpt: "Learn practical advice and expert tips for a smoother and more effective rehabilitation process."  
+   Published Date: 2025-03-01  
+   Link: /blog/rehabilitation-tips
+
+6. Blog Title: "The Role of Technology in Modern Orthopedics"  
+   Excerpt: "A deep dive into how technology is reshaping the landscape of orthopedic care and treatment."  
+   Published Date: 2025-03-15  
+   Link: /blog/technology-in-orthopedics
+
+7. Blog Title: "Sustainable Healthcare: Eco-Innovations in Orthopedics"  
+   Excerpt: "Discover how our commitment to sustainability is making a difference in healthcare, from digital records to eco-friendly materials."  
+   Published Date: 2025-04-01  
+   Link: /blog/sustainable-healthcare-innovations
+
+### Admin Blog Editor ( Restricted - ONLY on owner/admin dashboard - Create, Edit/Update, Delete)
+- Rich Text Editor Interface:  
+  - Features: Bold, italic, headings, lists, image insertion, video embeds, and hyperlink support.
+  - Preview Mode: Allow authors to preview how the blog post will appear once published.
+  - Save as Draft & Publish: Options to save drafts and schedule publication.
+  - Tagging & Categories: Enable categorization (e.g., Innovation, Patient Stories, Tips) for better content organization.
+
+### Additional Considerations
+- SEO Optimized:  
+  Use metadata, alt tags for images, and friendly URLs to enhance search engine visibility.
+- Social Sharing Buttons:  
+  Make it easy for readers to share blog posts on platforms like Twitter, Facebook, and LinkedIn.
+- Comments Section:  
+  Optionally include a moderated comments area to foster community engagement (if you choose to enable user interactions).
+
+###############
+Update “Quick Links” in footer by adding “Products” and “Blogs” links immediately below “Services”. Then add the “Donate” link at the bottom, below “Contact” this donate should be a button and must be animated to have my primary colors as a gradient and should be blinking like a heartbeat.
+
+These 2: “Products” and “Blogs” must also be on navbar immediately after “Services”.
+
+My social media icons in the footer should also be neumorphic as they are in the contact page “Connect With Us”.
+
+ How is that “Live Chat” working? I want it to be connected to the admin dashboard. Other admins can see if a client’s message has been responded to… one client to many admins “one-to-many”
+
+###############
+How are the admins getting patients input on the “appointment” page, on their admin dashboards? {
+Book an Appointment
+Schedule a Consultation with Our Specialists} Ensure that the data is going and displaying on a dashboard with good UI
