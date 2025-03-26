@@ -1,7 +1,7 @@
+
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import GradientText from "@/components/common/GradientText";
 
 const services = [
   {
@@ -68,64 +68,61 @@ export default function Services() {
 
   return (
     <main>
-      <section className="bg-gray-100 py-12">
+      <div className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold">
-              <GradientText>Our Services</GradientText>
-            </h1>
-            <p className="text-xl text-gray-600 mt-2">Comprehensive Solutions for Every Need</p>
-            <p className="text-gray-700 text-lg max-w-3xl mx-auto mt-4">
-              At LIMBS Orthopaedic, we offer a comprehensive range of prosthetic and orthotic solutions tailored to meet the unique needs of each patient. Our services are designed to enhance mobility, improve comfort, and restore independence.
-            </p>
-          </div>
+          <h1 className="text-4xl font-bold text-center">Our Services</h1>
+          <p className="text-xl text-gray-600 mt-2 text-center">Comprehensive Solutions for Every Need</p>
+          <p className="text-gray-700 text-lg max-w-4xl mx-auto text-center mt-4">
+            At LIMBS Orthopaedic, we offer a comprehensive range of prosthetic and orthotic solutions tailored to meet the unique needs of each patient. Our services are designed to enhance mobility, improve comfort, and restore independence.
+          </p>
         </div>
-      </section>
-
-      <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service) => (
-          <Card key={service.id} className="overflow-hidden flex flex-col">
-            <div className="h-48 sm:h-56 md:h-64 relative overflow-hidden">
-              <img 
-                src={service.image} 
-                alt={service.title}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-            <CardHeader>
-              <CardTitle className="text-xl md:text-2xl">{service.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1 flex flex-col">
-              <p className="mb-4 text-sm md:text-base flex-1">{service.description}</p>
-              <div className="flex flex-col gap-2 mt-auto">
-                <Button onClick={handleBooking} className="w-full">
-                  Book a Consultation <i className="fas fa-arrow-right ml-2"></i>
-                </Button>
-                <Button 
-                  className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white" 
-                  onClick={() => handleWhatsApp(service.title)}
-                >
-                  <i className="fab fa-whatsapp mr-2"></i>
-                  Consult on WhatsApp
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
       </div>
 
-      <section className="mt-12">
-        <h2 className="text-2xl font-bold mb-4">Home-Based Care Services</h2>
-        <Card>
-          <CardContent className="pt-6">
-            <p className="text-sm md:text-base">Our team extends its expertise to the comfort of your home. We provide professional care services—such as physical therapy, orthotic fittings, and follow-up consultations—right at your doorstep, ensuring convenience and personalized attention.</p>
-            <Button className="mt-4 w-full sm:w-auto" asChild>
-              <a href="tel:+254719628276">Call Us +254719628276</a>
-            </Button>
-          </CardContent>
-        </Card>
-      </section>
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service) => (
+            <Card key={service.id} className="overflow-hidden flex flex-col">
+              <div className="h-48 sm:h-56 md:h-64 relative overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl md:text-2xl">{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1 flex flex-col">
+                <p className="mb-4 text-sm md:text-base flex-1">{service.description}</p>
+                <div className="flex flex-col gap-2 mt-auto">
+                  <Button onClick={handleBooking} className="w-full">
+                    Book a Consultation <i className="fas fa-arrow-right ml-2"></i>
+                  </Button>
+                  <Button 
+                    className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white" 
+                    onClick={() => handleWhatsApp(service.title)}
+                  >
+                    <i className="fab fa-whatsapp mr-2"></i>
+                    Consult on WhatsApp
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Home-Based Care Services</h2>
+          <Card>
+            <CardContent className="pt-6">
+              <p className="text-sm md:text-base">Our team extends its expertise to the comfort of your home. We provide professional care services—such as physical therapy, orthotic fittings, and follow-up consultations—right at your doorstep, ensuring convenience and personalized attention.</p>
+              <Button className="mt-4 w-full sm:w-auto" asChild>
+                <a href="tel:+254719628276">Call Us +254719628276</a>
+              </Button>
+            </CardContent>
+          </Card>
+        </section>
+      </div>
 
       {/* Process Section */}
       <section className="py-16 bg-gray-50">
