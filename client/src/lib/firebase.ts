@@ -34,4 +34,17 @@ export const initAnalytics = async () => {
   return analyticsSupported ? getAnalytics(app) : null;
 };
 
+// Add network state listener
+let isReconnecting = false;
+
+window.addEventListener('online', () => {
+  if (isReconnecting) return;
+  isReconnecting = true;
+  window.location.reload();
+});
+
+window.addEventListener('offline', () => {
+  isReconnecting = false;
+});
+
 export default app;
