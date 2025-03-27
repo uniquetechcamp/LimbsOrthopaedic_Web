@@ -54,6 +54,8 @@ const services = [
   }
 ];
 
+import GradientText from "@/components/common/GradientText";
+
 export default function Services() {
   const [, navigate] = useLocation();
 
@@ -70,9 +72,11 @@ export default function Services() {
     <main>
       <div className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center">Our Services</h1>
-          <p className="text-xl text-gray-600 mt-2 text-center">Comprehensive Solutions for Every Need</p>
-          <p className="text-gray-700 text-lg max-w-4xl mx-auto text-center mt-4">
+          <h1 className="text-4xl font-bold">
+            <GradientText>Our Services</GradientText>
+          </h1>
+          <p className="text-xl text-gray-600 mt-2">Comprehensive Solutions for Every Need</p>
+          <p className="text-gray-700 text-lg max-w-4xl mt-4">
             At LIMBS Orthopaedic, we offer a comprehensive range of prosthetic and orthotic solutions tailored to meet the unique needs of each patient. Our services are designed to enhance mobility, improve comfort, and restore independence.
           </p>
         </div>
