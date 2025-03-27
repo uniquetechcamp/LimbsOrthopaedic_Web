@@ -82,12 +82,12 @@ export default function Products() {
     <main>
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
-          <div className="text-center">
+          <div>
             <h1 className="text-4xl font-bold mb-4">
               <GradientText>Our Products</GradientText>
             </h1>
             <p className="text-xl text-gray-600 mt-2">Quality Mobility Solutions</p>
-            <p className="text-gray-700 text-lg max-w-4xl mx-auto mt-4">
+            <p className="text-gray-700 text-lg max-w-4xl mt-4">
               Explore our comprehensive range of mobility aids and orthopedic solutions. Each product is carefully selected to provide maximum comfort, support, and independence.
             </p>
           </div>
