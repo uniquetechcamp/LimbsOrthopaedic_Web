@@ -1,6 +1,6 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { NetworkError } from './NetworkError';
+import { NetworkError } from "./NetworkError";
 
 interface Props {
   children: ReactNode;

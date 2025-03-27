@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-export default function NetworkError() {
+export function NetworkError() {
   const [isRetrying, setIsRetrying] = useState(false);
   const [countdown, setCountdown] = useState(30);
 
