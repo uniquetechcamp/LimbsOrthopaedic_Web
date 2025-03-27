@@ -1,3 +1,4 @@
+
 # Project Structure Documentation
 
 ```
@@ -7,106 +8,125 @@ limbs-orthopaedic/
 │   │   ├── components/
 │   │   │   ├── common/           # Shared components
 │   │   │   ├── layout/           # Layout components
-│   │   │   └── ui/              # UI components
+│   │   │   └── ui/              # Shadcn UI components
 │   │   ├── contexts/            # React contexts
 │   │   ├── hooks/              # Custom hooks
 │   │   ├── lib/               # Utilities
 │   │   ├── pages/            # Page components
-│   │   │   ├── About.tsx
-│   │   │   ├── Blog.tsx
-│   │   │   ├── Contact.tsx
-│   │   │   ├── Home.tsx
-│   │   │   ├── Products.tsx
-│   │   │   └── Services.tsx
-│   │   └── styles/          # CSS styles
-│   ├── public/             # Static assets
-│   └── index.html         # HTML entry
+│   │   │   ├── admin/       # Admin pages
+│   │   │   ├── auth/       # Authentication pages
+│   │   │   └── public/    # Public pages
+│   │   ├── store/        # Redux store and slices
+│   │   └── styles/      # CSS and Tailwind styles
+│   ├── public/         # Static assets
+│   └── index.html     # HTML entry
 ├── server/
-│   ├── controllers/      # Route controllers
-│   ├── middleware/      # Express middleware
-│   ├── models/         # Data models
-│   ├── routes/        # API routes
-│   └── index.ts       # Server entry
-├── shared/           # Shared code
-│   └── schema.ts    # Type definitions
-├── scripts/        # Utility scripts
-├── .gitignore
-├── package.json
-└── tsconfig.json
+│   ├── controllers/  # Route controllers
+│   ├── middleware/  # Express middleware
+│   ├── models/     # Data models
+│   ├── routes/    # API routes
+│   └── index.ts  # Server entry
+├── shared/      # Shared code
+│   └── schema.ts # Type definitions
+├── scripts/    # Utility scripts
+└── config/    # Configuration files
 ```
 
-## Key Directories
+## Key Technologies
 
-### Frontend (/client)
-- `components/`: Reusable UI components
-- `contexts/`: React context providers
-- `hooks/`: Custom React hooks
-- `pages/`: Main page components
-- `lib/`: Utility functions and configurations
+### Frontend
+- **React 18** with TypeScript
+- **Vite** for build tooling
+- **Redux Toolkit** for state management
+- **React Router v6** for routing
+- **Tailwind CSS** with custom theme
+- **Shadcn UI** components
+- **React Hook Form** + Zod for forms
+- **React Query** for data fetching
 
-### Backend (/server)
-- `controllers/`: Business logic
-- `middleware/`: Request processing
-- `models/`: Data schemas
-- `routes/`: API endpoint definitions
-
-### Shared (/shared)
-- Common types and utilities used by both frontend and backend
-
-### Configuration Files
-- `tsconfig.json`: TypeScript configuration
-- `package.json`: Project dependencies
-- `.env.local`: Environment variables
-
-## Technologies and Tools
-
-### Programming Languages
-- **TypeScript/JavaScript**
-  - Used throughout the frontend (React components, hooks, contexts)
-  - Backend server implementation (Express.js)
-  - Shared type definitions and utilities
-
-- **CSS/SCSS**
-  - Styling with Tailwind CSS
-  - Custom CSS modules
-  - Theme customization
-
-### Frontend Technologies
-- **React**: Main frontend framework
-- **Redux Toolkit**: State management
-- **Wouter**: Lightweight routing
-- **Tailwind CSS**: Utility-first CSS framework
-- **Shadcn UI**: Component library built on Radix UI
-- **Vite**: Build tool and development server
-- **React Query**: Data fetching and caching
-- **React Hook Form**: Form handling
-- **Zod**: Schema validation
-
-### Backend Technologies
-- **Express.js**: Web server framework
-- **Drizzle ORM**: Database ORM
-- **PostgreSQL**: Database (via NeonDB serverless)
-- **Passport.js**: Authentication middleware
-- **Firebase**: Authentication and storage
-- **WebSocket**: Real-time communication
+### Backend
+- **Express.js** with TypeScript
+- **Drizzle ORM** for database operations
+- **NeonDB** (PostgreSQL) for data storage
+- **Firebase Auth** for authentication
+- **WebSocket** for real-time features
 
 ### Development Tools
-- **ESBuild**: JavaScript bundler
-- **TypeScript**: Static type checking
-- **PostCSS**: CSS processing
-- **Node.js**: Runtime environment
-- **npm**: Package management
+- **TypeScript** for type safety
+- **ESLint** + Prettier for code quality
+- **Replit** for development and deployment
+- **Git** for version control
 
-### Testing and Quality
-- **React Testing Library**: Component testing
-- **TypeScript**: Type checking
-- **ESLint**: Code linting
-- **Prettier**: Code formatting
+### Testing
+- **Vitest** for unit testing
+- **React Testing Library** for component tests
+- **MSW** for API mocking
 
-### Deployment and Infrastructure
-- **Replit**: Development and hosting platform
-- **Cloud Run**: Deployment target
-- **NeonDB**: Serverless Postgres database
+### Key Features Implementation
 
-### Version Control
-- **Git**: Source code management
+#### Authentication System
+- Firebase Authentication integration
+- Role-based access control
+- Protected routes
+- Admin dashboard access
+
+#### Appointment System
+- Real-time booking
+- Calendar integration
+- Email notifications
+- Status tracking
+
+#### Patient Management
+- Patient profiles
+- Treatment history
+- Progress tracking
+- Document storage
+
+#### Admin Features
+- User management
+- Appointment oversight
+- Content management
+- Analytics dashboard
+
+## Development Workflows
+
+### Local Development
+```bash
+npm run dev          # Start development server
+npm run build       # Build for production
+npm run test       # Run tests
+npm run lint      # Run linter
+```
+
+### Database Operations
+```bash
+npm run db:push    # Update database schema
+npm run db:studio # Open database UI
+```
+
+### Deployment (Replit)
+- Automatic deployment via Replit
+- Production optimization
+- Environment variable management
+- SSL/TLS security
+
+## Environment Configuration
+Required environment variables:
+- Firebase credentials
+- Database connection
+- API keys
+- Service configurations
+
+## Performance Optimizations
+- Code splitting
+- Lazy loading
+- Image optimization
+- Caching strategies
+- API response compression
+
+## Security Measures
+- CORS configuration
+- Rate limiting
+- Input validation
+- XSS prevention
+- CSRF protection
