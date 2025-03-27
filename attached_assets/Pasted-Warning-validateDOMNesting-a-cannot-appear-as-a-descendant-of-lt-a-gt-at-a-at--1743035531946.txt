@@ -1,0 +1,57 @@
+Warning: validateDOMNesting(...): <a> cannot appear as a descendant of &lt;a&gt;.
+    at a
+    at a
+    at https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=b2806ce1:279:18
+    at li
+    at ul
+    at div
+    at div
+    at div
+    at footer
+    at Footer
+    at App
+    at AuthProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/src/contexts/AuthContext.tsx?v=E7qpSiso0ZRaq3xQtJJaE:31:32)
+    at Provider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-redux.js?v=b2806ce1:923:11)
+    at QueryClientProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=b2806ce1:2805:3)
+at a
+at a
+at https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=b2806ce1:279:18
+at li
+at ul
+at div
+at div
+at div
+at footer
+at Footer
+at App
+at AuthProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/src/contexts/AuthContext.tsx?v=E7qpSiso0ZRaq3xQtJJaE:31:32)
+at Provider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-redux.js?v=b2806ce1:923:11)
+at QueryClientProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=b2806ce1:2805:3)
+at t.value (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
+useAuth must be used within an AuthProvider
+useAuth must be used within an AuthProvider
+useAuth must be used within an AuthProvider
+The above error occurred in the <Header> component:
+
+    at Header (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/src/components/layout/Header.tsx:34:22)
+    at App
+    at AuthProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/src/contexts/AuthContext.tsx?v=E7qpSiso0ZRaq3xQtJJaE:31:32)
+    at Provider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-redux.js?v=b2806ce1:923:11)
+    at QueryClientProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=b2806ce1:2805:3)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+The above error occurred in the <LiveChat> component:
+
+    at LiveChat (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/src/components/layout/LiveChat.tsx:24:39)
+    at App
+    at AuthProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/src/contexts/AuthContext.tsx?v=E7qpSiso0ZRaq3xQtJJaE:31:32)
+    at Provider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-redux.js?v=b2806ce1:923:11)
+    at QueryClientProvider (https://61d91a82-3903-4788-9dd8-694c1ac442e5-00-ha8z6p3cfyu6.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=b2806ce1:2805:3)
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+useAuth must be used within an AuthProvider
