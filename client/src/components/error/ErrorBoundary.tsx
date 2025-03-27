@@ -29,7 +29,13 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   handleNetworkChange = () => {
-    this.setState({ isOffline: !navigator.onLine });
+    const isOffline = !navigator.onLine;
+    this.setState({ isOffline, hasError: isOffline ? false : this.state.hasError });
+    
+    if (!isOffline) {
+      // Attempt to reconnect to Vite server when coming back online
+      window.location.reload();
+    }
   };
 
   public static getDerivedStateFromError(): State {
