@@ -1,47 +1,52 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { setUser } from '@/store/slices/authSlice';
-import { auth } from '@/lib/firebase';
-import type { User } from 'firebase/auth';
+
+import React, { createContext, useEffect, useState } from 'react';
+import { auth, db } from '@/lib/firebase';
+import { User as FirebaseUser } from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
+
+export type Role = 'patient' | 'doctor' | 'owner';
+
+interface User extends FirebaseUser {
+  role?: Role;
+}
 
 interface AuthContextType {
-  currentUser: User | null;
+  user: User | null;
   loading: boolean;
 }
 
-export const AuthContext = createContext<AuthContextType | null>(null);
+export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export function useAuth() {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
-  return context;
-}
-
-export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [currentUser, setCurrentUser] = useState<User | null>(null);
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const dispatch = useDispatch();
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
-      setCurrentUser(user);
-      dispatch(setUser(user));
+    const unsubscribe = auth.onAuthStateChanged(async (firebaseUser) => {
+      if (firebaseUser) {
+        // Get additional user data from Firestore
+        const userDoc = await getDoc(doc(db, 'users', firebaseUser.uid));
+        const userData = userDoc.data();
+        
+        // Merge Firebase user with additional data
+        const enhancedUser = {
+          ...firebaseUser,
+          role: userData?.role as Role,
+        };
+        
+        setUser(enhancedUser);
+      } else {
+        setUser(null);
+      }
       setLoading(false);
     });
 
-    return unsubscribe;
-  }, [dispatch]);
-
-  const value = {
-    currentUser,
-    loading
-  };
+    return () => unsubscribe();
+  }, []);
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={{ user, loading }}>
       {!loading && children}
     </AuthContext.Provider>
   );
-}
+};
