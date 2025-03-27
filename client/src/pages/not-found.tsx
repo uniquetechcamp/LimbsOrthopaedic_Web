@@ -5,9 +5,9 @@ import { Link } from "wouter";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6 flex flex-col items-center">
+    <div className="w-full flex items-center justify-center bg-gray-50 py-12">
+      <Card className="w-full max-w-md mx-4 my-8">
+        <CardContent className="py-8 flex flex-col items-center">
           <img 
             src="https://i.imgur.com/MoQBpLt.png" 
             alt="404 Error" 
