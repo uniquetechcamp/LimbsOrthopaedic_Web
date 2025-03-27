@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "wouter";
 
 export default function NotFound() {
   return (
@@ -15,7 +15,7 @@ export default function NotFound() {
           />
           
           <Link 
-            to="/" 
+            href="/" 
             className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
           >
             Go Back to Home Page <ChevronLeft className="h-4 w-4" />
