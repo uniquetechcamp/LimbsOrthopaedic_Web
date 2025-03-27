@@ -1,51 +1,33 @@
+import React from 'react';
+import { AuthProvider } from './context/AuthContext'; // Assuming this context exists
+import Router from './components/Router'; // Assuming this router component exists
 
-import { Link } from "wouter";
-import { useAuth } from "@/hooks/useAuth";
-
-const Navigation = () => {
-  const { user } = useAuth();
-
-  const navigationLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/products', label: 'Products' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/testimonials', label: 'Testimonials' },
-    { href: '/contact', label: 'Contact' },
-  ];
-
-  const authLinks = user ? [
-    { href: '/profile', label: 'Profile' },
-    { href: '/appointment', label: 'Book Appointment' },
-    ...(user.role === 'doctor' ? [{ href: '/dashboard', label: 'Dashboard' }] : []),
-    ...(user.role === 'owner' ? [{ href: '/dashboard/doctors', label: 'Manage Doctors' }] : []),
-  ] : [
-    { href: '/login', label: 'Login' },
-    { href: '/register', label: 'Register' },
-  ];
-
+function App() {
   return (
-    <nav className="hidden md:flex space-x-6">
-      {navigationLinks.map((link) => (
-        <Link 
-          key={link.href} 
-          href={link.href}
-          className="text-gray-600 hover:text-primary transition-colors"
-        >
-          {link.label}
-        </Link>
-      ))}
-      
-      {authLinks.map((link) => (
-        <Link 
-          key={link.href} 
-          href={link.href}
-          className="text-gray-600 hover:text-primary transition-colors"
-        >
-          {link.label}
-        </Link>
-      ))}
+    <AuthProvider>
+      <Router />
+    </AuthProvider>
+  );
+}
+
+export default App;
+
+// Example of how the navigation component might look after changes
+
+import Link from 'next/link'; // Or your preferred routing library
+
+const Navigation = ({ links }) => {
+  return (
+    <nav>
+      <ul>
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href} className="hover:text-primary">
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
