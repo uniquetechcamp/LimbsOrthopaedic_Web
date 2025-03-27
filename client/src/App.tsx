@@ -35,6 +35,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
         <AuthProvider>
+          <ErrorBoundary>
           <div className="flex flex-col min-h-screen">
             <Header />
             <main className="flex-grow">
@@ -83,6 +84,7 @@ function App() {
             <LiveChat />
             <Toaster />
           </div>
+          </ErrorBoundary>
         </AuthProvider>
       </Provider>
     </QueryClientProvider>
