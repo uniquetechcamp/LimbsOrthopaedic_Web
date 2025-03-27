@@ -1,8 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "@/contexts/AuthContext";
-import { User, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { auth } from "../lib/firebase";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth as useAuthContext } from "@/contexts/AuthContext";
 
 export type Role = "patient" | "doctor" | "owner";
 
@@ -15,12 +14,8 @@ export interface UserData {
 }
 
 export function useAuth() {
-  const context = useContext(AuthContext);
+  const context = useAuthContext();
   const { toast } = useToast();
-  
-  if (!context) {
-    throw new Error("useAuth must be used within an AuthProvider");
-  }
   
   const handleLogout = async () => {
     try {
