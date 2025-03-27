@@ -28,6 +28,8 @@ const products = [
     name: "Crutches",
     description: "Ergonomically designed crutches that help redistribute weight and support ambulation during recovery or long-term mobility challenges.",
     image: "https://images.unsplash.com/photo-1584515848543-f3b218b91448?q=80&w=800&auto=format&fit=crop",
+    price: 8000,
+    salePrice: 6500,
     link: "/products/crutches"
   },
   {
