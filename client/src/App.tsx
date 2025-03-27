@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { Route, Switch } from "wouter";
+import { ErrorBoundary } from "@/components/error/ErrorBoundary";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import LiveChat from "@/components/layout/LiveChat";
